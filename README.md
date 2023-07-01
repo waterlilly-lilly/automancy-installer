@@ -1,0 +1,2 @@
+# automancy-installer
+installs automancy
