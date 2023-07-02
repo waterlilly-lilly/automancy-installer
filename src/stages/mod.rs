@@ -1,6 +1,8 @@
 pub mod update_check;
+pub mod welcome;
+pub mod exit_confirmation;
 
-#[derive(Default)]
+#[derive(Default, Copy, Clone)]
 pub enum InstallerStage {
     #[default]
     UpdateCheck,
@@ -9,5 +11,6 @@ pub enum InstallerStage {
     Options,
     Progress,
     Complete,
+    ExitConfirmation,
     Error
 }

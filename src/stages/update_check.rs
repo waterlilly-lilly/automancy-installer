@@ -7,7 +7,7 @@ pub fn update_check(ui: &mut Ui, stage: &mut InstallerStage, timeout: &mut DateT
     ui.label("Checking for updates, please wait...");
     ui.label("(this doesn't actually do anything rn)");
     ui.add(Spinner::new().size(32.0).color(Color32::LIGHT_BLUE));
-    if chrono::Local::now().signed_duration_since(timeout.clone()) > Duration::seconds(10) {
+    if Local::now().signed_duration_since(timeout.clone()) > Duration::seconds(3) {
         *stage = InstallerStage::Welcome;
     }
 }
